@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TikTok baning Page</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #1a1a1a;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 20px;
+        }
+
+        .wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: stretch;
+            width: 100%;
+            height: 100%;
+        }
+
+        .banner {
+            background-color: #000000;
+            width: 150px;
+            margin: 10px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+            color: #78e4ff;
+            font-size: 1.2em; /* Changed font-size for better readability */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            flex-grow: 1;
+        }
+
+        .container {
+            background-color: #000000;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            max-width: 600px;
+            margin: 10px;
+            border: 2px solid #3ffff5;
+            flex-shrink: 0;
+        }
+
+        .input-group {
+            margin: 15px 0;
+            text-align: center;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            font-size: 1em; /* Changed font-size for better readability */
+        }
+
+        .input-group input, .input-group select, .StripeElement {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #cd42f7;
+            border-radius: 5px;
+            background-color: #000000;
+            color: #fff;
+            box-sizing: border-box;
+            font-size: 1em; /* Changed font-size for better readability */
+        }
+
+        .input-group button {
+            width: 100%;
+            padding: 15px;
+            background-color: #000000;
+            border: 1px solid #cd42f7;
+            border-radius: 5px;
+            color: #fff;
+            font-size: 1em; /* Changed font-size for better readability */
+            font-weight: bold;
+            cursor: pointer;
+            box-sizing: border-box;
+            transition: background-color 0.3s ease;
+        }
+
+        .input-group button:hover {
+            background-color: #f73fe7;
+        }
+
+        .logo {
+            width: 250px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #fff;
+            font-size: 2em; /* Changed font-size for better readability */
+            margin-bottom: 20px;
+        }
+
+        .notation {
+            background-color: #000000;
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 20px;
+            text-align: center;
+            border: 1px solid #ee00c6;
+            font-size: 1em; /* Changed font-size for better readability */
+        }
+
+        .notation p {
+            margin: 10px 0;
+        }
+
+        .notation strong {
+            color: #00fce7;
+        }
+
+        .spunky {
+            color: #8d28df;
+            font-weight: bold;
+            font-size: 1.2em; /* Changed font-size for better readability */
+        }
+
+        .emoji {
+            display: inline-block;
+            margin-right: 10px;
+        }
+    </style>
+    <script src="https://js.stripe.com/v3/"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <!-- Left Side Banner -->
+        <div class="banner">
+            <img src="./logo3.png" alt="Logo" class="logo">
+        </div>
+
+        <!-- Main Container -->
+        <div class="container">
+            <img src="./logo1.png" alt="Logo" class="logo">
+            <h1 class="spunky">Anti Ban TT APP</h1>
+            <form id="banForm">
+                <div class="input-group">
+                    <label for="username">EMAIL</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="input-group">
+                    <label for="banOption">Ban Option</label>
+                    <select id="banOption" name="banOption" required>
+                        <option value="AntiBannedTiktokApp_200.00">US Download TTApp 1yr - $200.00</option>
+                        <option value="AntiBannedTiktokApp_400.00">US Download TTApp 2yr - $400.00</option>
+                        <option value="AntiBannedTiktokApp_600.00">US Download TTApp 3yr - $600.00</option>
+                        <option value="AntiBannedTiktokApp_800.00">US Download TTApp 4yr - $800.00</option>
+                        <option value="AntiBannedTiktokApp_1000.00">US Download TTApp 5yr - $1000.00</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="card-element">Credit Card Number</label>
+                    <div id="card-element" class="StripeElement"></div>
+                </div>
+                <div class="input-group">
+                    <button type="submit">BUY</button>
+                </div>
+            </form>
+            <div class="notation">
+                <h3>Notation</h3>
+                <p><span class="emoji">⏱️</span>Wait for confirmation Email after Payment.</p>
+                <p><span class="emoji">🚀</span>Time Frame: Will send download when payment clears.</p>
+                <p><span class="emoji">⏳</span>Delivery time wil depend on your bank institution</p>
+                <p><span class="emoji">📧</span>For any questions, please contact us at antibantiktokus@gmail.com </p>
+                    <p><span class="emoji">📧</span>ACCEPTING CRYPTO SOLANA WALLET ADDRESS FcffCNKKV62DAC4WcNMNQLGhhTtYw7xsjVv4S5jAHNKQ solana only!!  </strong>
+            </div>
+        </div>
+
+        <!-- Right Side Banner -->
+        <div class="banner">
+            <img src="./logo2rs.png" alt="Logo" class="logo">
+        </div>
+    </div>
+    <script>
+        // Set up Stripe
+        const stripe = Stripe('pk_live_51PsIFBBvs3bhEhSJTHliM7G5IAIkAK3YeAZzjXtwCxB7OkdiW9BcIWCvYtIX5BRqhwguOIRhNRkFsD1Q5uzZTR5300BOFejfrL');
+        const elements = stripe.elements();
+        const cardElement = elements.create('card');
+        cardElement.mount('#card-element');
+        
+        // Handle form submission
+        document.getElementById('banForm').addEventListener('submit', async (event) => {
+            event.preventDefault();
+            const username = document.getElementById('username').value;
+            const banOption = document.getElementById('banoption').value;
+
+            // Parse the selected ban option to get the type and amount
+            const [amount, banType, price] = banOption.split('_');
+
+            // Create a payment method
+            const {error, paymentMethod} = await stripe.createPaymentMethod({
+                type: 'card',
+                card: cardElement,
+                billing_details: { name: username },
+            });
+
+            if (error) {
+                console.error('Error creating payment method:', error);
+                alert('Payment failed. Please try again.');
+            } else {
+                // Process payment with the created payment method
+                console.log('Payment method created:', paymentMethod);
+
+                // Simulate a successful payment for demonstration purposes
+                alert(`Payment of $${price} successful! baning your TikTok profile with ${amount} ${banType} now.`);
+            }
+        });
+    </script>
+</body>
+</html>
